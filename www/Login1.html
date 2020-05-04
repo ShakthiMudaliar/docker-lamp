@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+<head>
+<script type='text/javascript'>
+            function validation(){
+			
+			
+			
+			}
+</script>		
+<style>
+	b{
+		color:white;
+	}
+	fieldset{
+		background-color:Aqua;
+		border: 1px solid rgb(255,232,57);
+		  width: 400px;
+		  margin:auto;
+		-webkit-border-radius: 20px;
+		-moz-border-radius: 20px;
+		border-radius: 20px;  
+	}
+	
+</style>
+  <title>Login</title>
+</head>
+<body>
+    <br><br><br><br><br><br><br><br>
+    <form action="login12.php" method="POST">
+	<fieldset>
+    <h1 align="center"><b font-size="10">Login Details</b></h1>
+    <table cellpadding="8" cellspacing="8" align="center">
+        <tr>
+                    <td><select name="Type" >
+						<option value="Default">TYPE</option>
+						<option value="Admin">Admin</option>
+						<option value="Customer">Customer</option>
+						
+					</select></td>
+                </tr>
+		<tr>
+            <td> <b>E-Mail:</b> </td>
+            <td> <input type="E-Mail" name="EMail" placeholder="Enter Email"> </td>
+        </tr>
+        <tr>
+            <td> <b>Password:</b> </td>
+            <td> <input type="password" name="Password" placeholder="Enter password"> </input></td>
+        </tr>
+        <tr>
+            <td> </td>
+            <td> <input type="submit" name="Login" value="Login"></input> </td>
+        </tr>
+    </table> </fieldset>   
+  </form>
+</body>
+</html>

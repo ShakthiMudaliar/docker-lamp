@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+<style>
+table,th,td {
+  border-collapse: collapse;
+  background-color:#ffff66;
+}
+th,td {
+  padding: 5px;
+}
+</style>
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+<body>
+<button class='btn btn-primary' type="button"  onclick="loadDoc()">CONTACTS:::</button>
+<br><br>
+<table border='0' id="demo"></table>
+
+<script>
+function loadDoc() {
+  var xhttp = new XMLHttpRequest();
+  xhttp.onreadystatechange = function() {
+    if (this.readyState == 4 && this.status == 200) {
+      myFunction(this);
+    }
+  };
+  xhttp.open("GET","cd_catalog1.xml",true);
+  xhttp.send();
+}
+function myFunction(xml) {
+  var i;
+  var xmlDoc = xml.responseXML;
+  var table="<tr><th>EMAIL</th><th>PHONE</th></tr>";
+  var x = xmlDoc.getElementsByTagName("CD");
+  for (i = 0; i <x.length; i++) { 
+    table += "<tr><td>" +
+    x[i].getElementsByTagName("EMAIL")[0].childNodes[0].nodeValue +
+    "</td><td>" +
+	
+    x[i].getElementsByTagName("PHONE")[0].childNodes[0].nodeValue +
+    "</td></tr>";
+  }
+  document.getElementById("demo").innerHTML = table;
+}
+</script>
+
+</body>
+</html>
