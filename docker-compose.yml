@@ -18,8 +18,8 @@ services:
         environment:
             MYSQL_DATABASE: mobile
             MYSQL_USER: root
-            MYSQL_PASSWORD: 
-            MYSQL_ROOT_PASSWORD:  
+            MYSQL_PASSWORD: root
+            MYSQL_ROOT_PASSWORD: root 
         volumes:
             - ./dump:/docker-entrypoint-initdb.d
             - ./conf:/etc/mysql/conf.d
@@ -34,7 +34,7 @@ services:
             - 8000:80
         environment:
             MYSQL_USER: root
-            MYSQL_PASSWORD: 
-            MYSQL_ROOT_PASSWORD:  
+            MYSQL_PASSWORD: root
+            MYSQL_ROOT_PASSWORD:  root
 volumes:
     persistent:
