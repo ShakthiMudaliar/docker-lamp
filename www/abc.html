@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Upload your files</title>
+</head>
+<body>
+    <?php
+        session_start();
+        if(isset($_SESSION['user'])){
+            header("location: http://localhost/SIESPhp_xampp/Success.php"); 
+        }
+    ?>
+    <form action="Display.php" method="POST">
+    <p>Login Details</p>
+    <input type="submit" name="submit" value="Submit">    
+  </form>
+</body>
+</html>

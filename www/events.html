@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html>
+<body id='color'>
+
+
+
+
+
+
+
+<p id="changecolor"> Hover Mouse Over me</p>
+
+<button onclick="showtimefunction()">The time is?</button>
+<p id="showtime"></p>
+
+<p name="para">Click anywhere in the document to change its background color.</p>
+
+<input type="text" onkeydown="alertondown()" placeholder="Press key-down button">
+<br>
+<br>
+<input type="text" onkeyup="alertonup()" placeholder="Press key-up button">
+<br>
+<br>
+<input type="text" oncopy="copyfunction()" value="Try to copy this text">
+<p id="copymessage"></p>
+<br>
+<br>
+<input type="text" oncut="cutfunction()" value="Try to cut this text">
+<p id="cutmessage"></p>
+
+<p ondblclick="dbclickfunction()">Double-click this paragraph to trigger a function.</p>
+
+<p id="dbclickdisplay"></p>
+
+Enter your name: <input type="text" onfocus="focusfunction(this)">
+<br>
+<br>
+<input type="text" id="myInput" oninput="myFunction()">
+
+<p id="inputshow"></p>
+
+<script type="text/javascript">
+//event one
+document.getElementById("changecolor").addEventListener("mouseover", mouseOver);
+document.getElementById("changecolor").addEventListener("mouseout", mouseOut);
+function mouseOver() {
+    document.getElementById("changecolor").style.color = "red";
+}
+function mouseOut() {
+    document.getElementById("changecolor").style.color = "black";
+}
+window.addEventListener("keydown",myfun)
+function myfun(){
+if(event.key=='v'){
+document.body.style.background = "violet";
+
+}}
+window.addEventListener("keyup",exa => {
+document.body.style.background = "green";
+});
+
+//event two
+function showtimefunction(){
+document.getElementById('showtime').innerHTML=Date();
+}
+
+//event three
+document.addEventListener("click", function(){
+    document.body.style.background = "red";
+});
+
+//event four
+
+function alertondown() {
+    alert("You pressed down key inside the input field");
+}
+//event five
+
+function alertonup() {
+    alert("You pressed up key inside the input field");
+}
+
+//event six
+
+function copyfunction() {
+    document.getElementById("copymessage").innerHTML = "You copied text!"
+}
+
+//event seven
+
+function cutfunction() {
+    document.getElementById("cutmessage").innerHTML = "You cut text!";
+}
+
+//event eight
+
+function dbclickfunction() {
+    document.getElementById("dbclickdisplay").innerHTML = "You double clicked on the above paragraph";
+}
+
+//event nine
+
+function focusfunction(x) {
+    x.style.background = "yellow";
+}
+
+//event ten
+
+function myFunction() {
+    var x = document.getElementById("myInput").value;
+    document.getElementById("inputshow").innerHTML = "You wrote: " + x;
+}
+
+
+
+</script>
+</body>
+</html>
