@@ -46,9 +46,9 @@ float:l
                 }
 		</style>	";
 
-$servername = "localhost";
-$username = "root";
-$password = "";
+$servername = "db";
+$username = "user";
+$password = "test";
 $dbname = "mobile";
 
 $pID=$_POST['BUY'];
