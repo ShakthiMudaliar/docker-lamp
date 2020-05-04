@@ -1,0 +1,11 @@
+<?xml version="1.0"?>
+<products>
+	<product id="1">
+		<name>abcdefghu</name>
+		<price>123456</price>
+</product>
+	<product id="2">
+		<name>deflmonp</name>
+		<price>123456</price>
+	</product>
+</products>

@@ -1,0 +1,39 @@
+<?php
+
+$servername = "localhost";
+$username = "root";
+$password = "";
+$dbname = "mobile";
+echo "<link rel='stylesheet' href='https://maxcdn.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css'>";
+ echo " <script src='https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js'></script>";
+ echo " <script src='https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js'></script>";
+ echo " <script src='https://maxcdn.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js'></script>";
+$conn = new mysqli($servername, $username, $password, $dbname);
+		// Check connection
+		if ($conn->connect_error) {
+			die("Connection failed: " . $conn->connect_error);
+		} 
+
+		$sql = "SELECT * FROM form";
+		$result = $conn->query($sql);
+		
+		if ($result->num_rows > 0) {
+		 while($row = $result->fetch_assoc()){
+			echo "<div class='container'>";
+			echo "<h2>".$row['pImage']."</h2>";
+			echo "<p>Image at the top (card-img-top):</p>";
+			echo "<div class='card' style='width:200px'>";
+			echo "<img class='card-img-top' src='img_avatar1.png' alt='Card image' style='width:100%>";
+			echo "<div class='card-body'>";
+			  echo "<h4 class='card-title'>John Doe</h4>";
+			  echo "<p class='card-text'>Some example text some example text. John Doe is an architect and engineer</p>";
+			  echo "<a href='#' class='btn btn-primary'>See Profile</a>";
+			echo "</div>";
+			echo "</div>";
+			 
+			 }
+			 
+		 }
+		 
+		 
+?>

@@ -1,0 +1,50 @@
+<html>
+    <head>
+        <title>TODO supply a title</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <script type='text/javascript'>
+            function validation(){
+                if (document.form.pID.value == ""){
+                    alert("E-Mail should not be empty")
+                    return false;
+                }
+                if (document.form.price.value == ""){
+                    alert("Website should not be empty")
+                    return false;
+                }
+                
+                return true;
+            }       
+        </script>
+    </head>
+    <body>
+        <form name='product' method="post" action="/"  onsubmit="return validation()">
+            <table>
+                <tr>
+                    <td>ID </td> <td><input type="text" name="pID" placeholder="Enter Product-ID"> </td>
+                </tr>
+                <tr>
+                    <td>Product_name </td> <td><input type="text" name="Product_name" placeholder="Enter Product-Name"> </td>
+                </tr>
+                <tr>
+                    <td>Image </td> <td><input type="text" name="pImage" placeholder="Enter Image"> </td>
+                </tr>
+				<tr>
+                    <td>description </td> <td><input type="text" name="pdesc" placeholder="Enter Product-desc"> </td>
+                </tr>
+				<tr>
+                    <td>Quantity </td> <td><input type="text" name="Quan" placeholder="Enter Quantity"> </td>
+                </tr>
+				<tr>
+                    <td>price </td> <td><input type="text" name="price" placeholder="Enter Price"> </td>
+                </tr>
+                <tr>
+					
+                    <td><a href="/Display.php"><input type="submit" name="Update" value="Update" ></a></td>
+                    <td><input type="submit" name="Delete" value="Delete"> </td>
+                </tr>                
+            </table>
+        </form>
+    </body>
+</html>
