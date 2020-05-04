@@ -1,8 +1,8 @@
 <?php
 
-$host = "localhost";
-$user = "root";
-$password ="";
+$host = "db";
+$user = "user";
+$password ="test";
 $database = "mobile";
 
 $id = "";
