@@ -1,7 +1,7 @@
 <?php
-$servername = "localhost";
-$username = "root";
-$password = "";
+$servername = "db";
+$username = "user";
+$password = "test";
 $dbname = "mobile";
 $ID="";
 $Email="";
@@ -145,9 +145,9 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         
 		
 		
-        $servername = "localhost";
-        $username = "root";
-        $password = "";
+        $servername = "db";
+        $username = "user";
+        $password = "test";
         $dbname = "mobile";
 
 
