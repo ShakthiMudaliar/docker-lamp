@@ -1,8 +1,8 @@
 <?php
     if ($_SERVER["REQUEST_METHOD"] == "POST") {
-$servername = "localhost";
-                    $username = "root";
-                    $password = "";
+$servername = "db";
+                    $username = "user";
+                    $password = "test";
                     $dbname = "mobile";
 $target_dir = "uploads/";
 		$target_file = $target_dir.basename($_FILES["FiletoUpload"]["name"]);
