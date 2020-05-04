@@ -14,7 +14,8 @@
     <body class='bd'>
         
         <?php
-            session_start();
+	    if(!session_start()){
+            session_start();}
             $user_id = $_SESSION['user'];
             echo 'Welcome : ' . $user_id . '<br>';
             
