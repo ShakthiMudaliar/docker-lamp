@@ -4,7 +4,7 @@ echo '<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>';
 
-$con=mysqli_connect("localhost","root","","mobile");
+$con=mysqli_connect("db","user","test","mobile");
 // Check connection
 if (mysqli_connect_errno())
   {
