@@ -7,9 +7,9 @@
         $Quan = clean_input($_POST["Quan"]);
         $price = clean_input($_POST["Price"]);
       
-        $servername = "localhost";
-        $username = "root";
-        $password = "";
+        $servername = "db";
+        $username = "user";
+        $password = "test";
         $dbname = "mobile";
 
         $conn = mysqli_connect($servername, $username, $password, $dbname);
