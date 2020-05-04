@@ -103,7 +103,7 @@
                     $conn->close();
 					if(isset($_SESSION)){
 				echo "<script>alert('Your order placed successfully please check your orders')</script>";
-				header("location: https://2886795363-8001-ollie08.environments.katacoda.com//bill.php");
+				header("location: https://2886795363-8001-ollie08.environments.katacoda.com/bill.php");
 				
 				}
 				else{
