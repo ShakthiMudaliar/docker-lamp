@@ -8,9 +8,9 @@
         $UserID1 = clean_input($_POST["UserID1"]);
         $Password1 = clean_input($_POST["Password1"]);
       
-        $servername = "localhost";
-        $username = "root";
-        $password = "";
+        $servername = "db";
+        $username = "user";
+        $password = "test";
         $dbname = "mobile";
 
         $conn = mysqli_connect($servername, $username, $password, $dbname);
@@ -19,7 +19,9 @@
         }
         
 		if(($UserID1=='Admin@gmail.com')&&($Password1==12345)){
-			header("location: http://localhost/SIESPhp_xampp/Admin.html");
+			header("location: http://
+			
+			/SIESPhp_xampp/Admin.html");
 		}
 		
 		else{
