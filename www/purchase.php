@@ -25,7 +25,7 @@
 			  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 			  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>';
 
-			$con=mysqli_connect("localhost","root","","mobile");
+			$con=mysqli_connect("db","user","test","mobile");
 			// Check connection
 			if (mysqli_connect_errno())
 			  {
@@ -70,9 +70,9 @@
             {
                 if ($_GET["checkout"] == 'true')
                 {
-                    $servername = "localhost";
-                    $username = "root";
-                    $password = "";
+                    $servername = "db";
+                    $username = "user";
+                    $password = "test";
                     $dbname = "mobile";
 
                     $conn = mysqli_connect($servername, $username, $password, $dbname);
