@@ -5,9 +5,9 @@
         $EMail = clean_input($_POST["EMail"]);
         $Password = clean_input($_POST["Password"]);
 		$Type= clean_input($_POST["Type"]);
-        $servername = "localhost";
-        $username = "root";
-        $password = "";
+        $servername = "db";
+        $username = "user";
+        $password = "test";
         $dbname = "mobile";
 
         $conn = mysqli_connect($servername, $username, $password, $dbname);
