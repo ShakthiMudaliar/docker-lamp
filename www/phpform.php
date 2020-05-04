@@ -8,9 +8,9 @@
         $Quan = clean_input($_POST["Quan"]);
         $price = clean_input($_POST["price"]);
 		
-        $servername = "localhost";
-        $username = "root";
-        $password = "";
+        $servername = "db";
+        $username = "user";
+        $password = "test";
         $dbname = "mobile";
 		$target_dir = "uploads/";
 		$target_file = $target_dir.basename($_FILES["fileToUpload"]["name"]);
